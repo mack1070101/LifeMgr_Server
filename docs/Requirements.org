@@ -1,4 +1,12 @@
 * User: "As a user I want to..."
-1. 
-
+1. Use Postgres to store data
+2. Create new users
+3. Store profile data
+4. Store logins for users
+5. Authenticate users
+6. Store To Dos
+7. Store Reminders
+8. Store photos for User collage
+8. Ensure users can only access their data
+9. Encrypted connections
 * Administrator: "As an administrator I want to..."
