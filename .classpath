@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/junit/junit/${junit.version}/junit-${junit.version}.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/spring-core/${spring.version}/spring-core-${spring.version}.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/slf4j/jcl-over-slf4j/${jcl-over-slf4j.version}/jcl-over-slf4j-${jcl-over-slf4j.version}.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/ch/qos/logback/logback-classic/${logback.version}/logback-classic-${logback.version}.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/spring-web/${spring.version}/spring-web-${spring.version}.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/springframework/spring-webmvc/${spring.version}/spring-webmvc-${spring.version}.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/jstl/jstl/${jstl.version}/jstl-${jstl.version}.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
