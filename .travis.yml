@@ -1,7 +1,7 @@
 language: java
 jdk:
 - oraclejdk8
-script: mvn clean verify
+script: mvn package
 dist: trusty
 deploy:
   provider: heroku
