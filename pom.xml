@@ -100,6 +100,9 @@
                 </configuration>
             </plugin>
 
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>1.1.3</version>
             <!-- For Maven Tomcat Plugin -->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
