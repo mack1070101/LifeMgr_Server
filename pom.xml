@@ -8,11 +8,6 @@
     <name>LifeMgr_Server Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.1.RELEASE</version>
-    </parent>
 
     <properties>
         <jdk.version>1.7</jdk.version>
@@ -21,7 +16,15 @@
         <junit.version>4.11</junit.version>
         <logback.version>1.0.13</logback.version>
         <jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
+        <start-class>com.lifemgr.server</start-class>
     </properties>
+
+        <parent>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>1.5.2.RELEASE</version>
+        </parent>
+
 
     <dependencies>
 
@@ -31,52 +34,31 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
         </dependency>
+        <!-- Spring Framework -->
 
-        <!-- Spring Core
-          <dependency>
-              <groupId>org.springframework</groupId>
-                  <artifactId>spring-core</artifactId>
-                      <version>${spring.version}</version>
-                          <exclusions>
-                              <exclusion>
-                                  <groupId>commons-logging</groupId>
-                                      <artifactId>commons-logging</artifactId>
-                                      </exclusion>
-                                  </exclusions>
-                              </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.jayway.jsonpath</groupId>
+                <artifactId>json-path</artifactId>
+                <scope>test</scope>
+            </dependency>
 
-                              <dependency>
-                                  <groupId>org.springframework</groupId>
-                                      <artifactId>spring-web</artifactId>
-                                          <version>${spring.version}</version>
-                                          </dependency>
-
-                                          <dependency>
-                                              <groupId>org.springframework</groupId>
-                                                  <artifactId>spring-webmvc</artifactId>
-                                                      <version>${spring.version}</version>
-                                                      </dependency>
-
-                                                      <dependency>
-                                                          <groupId>jstl</groupId>
-                                                              <artifactId>jstl</artifactId>
-                                                                  <version>${jstl.version}</version>
-                                                                  </dependency>
-                                                              -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-rest</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+        <!-- Postgres-->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.4-1200-jdbc4</version>
         </dependency>
-        <!-- Previous project Dependencies -->
+
+        <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
@@ -88,7 +70,6 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
-
 
     </dependencies>
     <build>
