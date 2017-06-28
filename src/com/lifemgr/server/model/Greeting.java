@@ -1,4 +1,3 @@
-
 package com.lifemgr.server.model
 
 public class Greeting {
