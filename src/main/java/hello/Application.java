@@ -9,8 +9,8 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 public class Application extends SpringBootServletInitializer {
 
     @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
+    protected SpringApplicationBuilder configure(final SpringApplicationBuilder application) {
+        return application.sources(this.getClass());
     }
 
     public static void main(String[] args) throws Exception {
