@@ -1,0 +1,13 @@
+language: java
+jdk:
+- oraclejdk8
+script: mvn package
+dist: trusty
+deploy:
+  provider: heroku
+  api_key:
+    secure: VGPSLFNzEOs51Mz4cycvc4PjoCh35V8YjadSaM+L3JJW0ME4bje0ovWtzha2p6fHvzAWpQdhcWd0dPyLJd3Pi12qh0pD6SlaBdOzyHiJB4kxt0bZXLd8el0O7cKOd8E3TjcS+V/4lQMi+wJ6HAs6uI7USQAw7OuRa0uCm9blXtFPiNm+Nhw8tk4o9yjFuZQ03fdlg72HlUtzAbqbJiCaLV75dLBltAB8ZTl891TuX4n4ZjFLHaEP6Je9iRPCAbKB5mAyGza191ugOl/t9KDJyQDc1d6Top+qBhl34iqpK7eI0xuyJlVASN6/rvzcwRDZI4ZpSypsX0RY4hpqXV6CXnEvNumhk3QA75/2ZDUcYoiWUWdUrdoXKbOg+w+FwRyO2NnDr+Tiiv5QK/A/J3Cu1iWF+iUdoBHXXPWL9LodDKDr5HRusBXGnj3sGGVsDB7FIjoGBFYqLKKMdUqYQoon0vTUEa9tPoAAfE9Jo4y1iMRhwm/9+M48Mkq6LOh+YptYmX3BqEKtV0L0vZ5AawT06RvRS1ccCEUit6fE7OHos3pRy3IW7lu03a56q9RdwF+3f6PXlztNMyf/dFmI5qTIydspEz4QKL0CJrELg08ROharAsvBHadtXoSesgfeOOXzcAmgPsi3L+2Li4NfOHr6vFIlaJk/E0meu3DTRwbxwCQ=
+  app: lifemgr-server
+  skip_cleanup: true
+  on:
+    repo: mack1070101/LifeMgr_Server
