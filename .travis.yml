@@ -10,4 +10,4 @@ deploy:
   app: lifemgr-server
   skip_cleanup: true
   on:
-    repo: mack1070101/LifeMgr_Server
+    repo: mack1070101/lifemgr-server
