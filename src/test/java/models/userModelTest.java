@@ -62,14 +62,14 @@ public class userModelTest {
         User u = new User("username1337", "Leeroy", "Jenkins", "1499182929", "YYYY-MM-DD");
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testBadTimePreference() {
         User u = new User("username1337", "Leeroy", "Jenkins",
                 "1499182929", "UNIX", "11",
                 "YYYY-MM-DD", "Edmonton, Alberta, Canada");
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testBadDatePreference() {
         User u = new User("username1337", "Leeroy", "Jenkins",
                 "1499182929", "UNIX", "12",
