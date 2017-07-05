@@ -89,11 +89,17 @@ public User (String username, String firstName, String lastName, String dateOfBi
         throw new IllegalArgumentException("Date Format is not UNIX epoch");
     } else this.dateOfBirth = dateOfBirth;
 
-    this.timePreference = timePreference;
-    this.datePreference = datePreference;
+    if(timePreference.equals("12-HH:MM:SS") || timePreference.equals("24-HH:MM:SS") ||
+            timePreference.equals("12-HH:MM") || timePreference.equals("24-HH:MM")){
+        this.timePreference = timePreference;
+    } else throw new IllegalArgumentException("Invalid time preference format");
+
+    if(datePreference.equals("YYYY/MM/DD") || datePreference.equals("MM/DD/YYYY") ||
+            datePreference.equals("DD/MM/YY")){
+        this.datePreference = datePreference;
+    } else throw new IllegalArgumentException("Invalid date preference format");
+
     this.location = location;
-
-
 }
 
     public String getUsername() {

@@ -18,8 +18,8 @@ public class userModelTest {
     @Test
     public void testGoodUserCreationMaxParams() {
         User u = new User("username1337", "Leeroy", "Jenkins",
-                "1499182929", "UNIX", "12",
-                "YYYY-MM-DD", "Edmonton, Alberta, Canada");
+                "1499182929", "UNIX", "12-HH:MM:SS",
+                "YYYY/MM/DD", "Edmonton, Alberta, Canada");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -66,13 +66,13 @@ public class userModelTest {
     public void testBadTimePreference() {
         User u = new User("username1337", "Leeroy", "Jenkins",
                 "1499182929", "UNIX", "11",
-                "YYYY-MM-DD", "Edmonton, Alberta, Canada");
+                "YYYY/MM/DD", "Edmonton, Alberta, Canada");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testBadDatePreference() {
         User u = new User("username1337", "Leeroy", "Jenkins",
-                "1499182929", "UNIX", "12",
+                "1499182929", "UNIX", "12-HH:MS",
                 "YYYY-QQ-GG", "Edmonton, Alberta, Canada");
     }
 }
