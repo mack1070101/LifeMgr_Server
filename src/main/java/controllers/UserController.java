@@ -10,7 +10,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
  * Created by mackenzie on 04/07/17.
  */
 @RequestMapping("/user")
-public class userController {
+public class UserController {
 
     @RequestMapping(name="/create", method=POST)
     public User user(@RequestParam String username,

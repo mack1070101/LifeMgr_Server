@@ -49,6 +49,10 @@ public User (String username, String firstName, String lastName, String dateOfBi
     if (!dateOfBirthFormat.equals("UNIX")) {
         throw new IllegalArgumentException("Date Format is not UNIX epoch");
     } else this.dateOfBirth = dateOfBirth;
+
+    this.timePreference = "";
+    this.datePreference = "";
+    this.location = "";
 }
  /**
  * Constructor for user containing the all parameters

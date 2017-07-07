@@ -1,6 +1,7 @@
 package integration;
 
-import controllers.userController;
+import controllers.UserController;
+import models.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +19,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * Created by mackenzie on 06/07/17.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes={userController.class})
+@ContextConfiguration(classes={UserController.class})
 @WebAppConfiguration
 @EnableWebMvc
 public class userControllerTest {
@@ -35,6 +36,8 @@ public class userControllerTest {
 
     @Test
     public void testSuccessfulUserPost(){
+        User user = new User("leeroyJ", "Leeroy", "Jenkins",
+                "1499444684", "UNIX");
 
     }
 
