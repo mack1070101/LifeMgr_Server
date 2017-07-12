@@ -11,3 +11,7 @@ deploy:
   skip_cleanup: true
   on:
     repo: mack1070101/lifemgr-server
+
+branches:
+    only:
+        - master
