@@ -116,5 +116,10 @@ public class userControllerTest {
     }
 
     @Test
-    public void respondToFailedDelete(){}
+    public void respondToFailedDelete() throws Exception{
+        mockMVC.perform(
+                delete("/user")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is4xxClientError());
+    }
 }

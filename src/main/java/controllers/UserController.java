@@ -4,6 +4,7 @@ import models.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
@@ -13,7 +14,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class UserController {
 
     @RequestMapping(name="/create", method=POST)
-    public User user(@RequestParam String username,
+    public void user(@RequestParam String username,
                      @RequestParam String firstName,
                      @RequestParam String lastName,
                      @RequestParam String dateOfBirth,
@@ -22,7 +23,12 @@ public class UserController {
                      @RequestParam(defaultValue = "", required = false) String datePreference,
                      @RequestParam(defaultValue = "", required = false) String location) {
 
-        return new User(username, firstName,lastName, dateOfBirth, dateOfBirthFormat,
+        User user = new User(username, firstName,lastName, dateOfBirth, dateOfBirthFormat,
                         timePreference, datePreference, location);
+    }
+
+    @RequestMapping(method=GET)
+    public void get(){
+
     }
 }
